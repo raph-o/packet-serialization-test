@@ -1,0 +1,27 @@
+"C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2024.1.1/bin/ninja/win/x64/ninja.exe" -G Ninja -S F:\C\serialize-test -B F:\C\serialize-test\cmake-build-debug
+-- Populating enet
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: F:/C/serialize-test/cmake-build-debug/_deps/enet-subbuild
+[0/7] Performing update step for 'enet-populate'
+[1/7] No patch step for 'enet-populate'
+[3/7] No configure step for 'enet-populate'
+[4/7] No build step for 'enet-populate'
+[5/7] No install step for 'enet-populate'
+[6/7] No test step for 'enet-populate'
+[7/7] Completed 'enet-populate'
+-- Populating cereal
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: F:/C/serialize-test/cmake-build-debug/_deps/cereal-subbuild
+[0/7] Performing update step for 'cereal-populate'
+[1/7] No patch step for 'cereal-populate'
+[3/7] No configure step for 'cereal-populate'
+[4/7] No build step for 'cereal-populate'
+[5/7] No install step for 'cereal-populate'
+[6/7] No test step for 'cereal-populate'
+[7/7] Completed 'cereal-populate'
+-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+-- Configuring done (1.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: F:/C/serialize-test/cmake-build-debug

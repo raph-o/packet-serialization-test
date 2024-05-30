@@ -1,0 +1,233 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						7
+					]
+				},
+				{
+					"build" : "_deps/enet-build",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.enet-build-Debug-dd23e0301dc3fce97565.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "cmake-build-debug/_deps/enet-src",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "_deps/cereal-build",
+					"childIndexes" : 
+					[
+						3,
+						5
+					],
+					"jsonFile" : "directory-_deps.cereal-build-Debug-259b41faccf12ed5d5ca.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "cmake-build-debug/_deps/cereal-src"
+				},
+				{
+					"build" : "_deps/cereal-build/sandbox",
+					"childIndexes" : 
+					[
+						4
+					],
+					"jsonFile" : "directory-_deps.cereal-build.sandbox-Debug-6685a8d969916e5d780d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 2,
+					"source" : "cmake-build-debug/_deps/cereal-src/sandbox",
+					"targetIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5
+					]
+				},
+				{
+					"build" : "_deps/cereal-build/sandbox/sandbox_shared_lib",
+					"jsonFile" : "directory-_deps.cereal-build.sandbox.sandbox_shared_lib-Debug-a6ec6a5913054ad28ece.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "cmake-build-debug/_deps/cereal-src/sandbox/sandbox_shared_lib",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "_deps/cereal-build/doc",
+					"jsonFile" : "directory-_deps.cereal-build.doc-Debug-3c9ddfafa4153bb93b3d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 2,
+					"source" : "cmake-build-debug/_deps/cereal-src/doc"
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "serialize_test",
+					"targetIndexes" : 
+					[
+						0,
+						7
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "enet",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5
+					],
+					"name" : "cereal",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Server::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Server-Debug-7ff08703e5dcceec044f.json",
+					"name" : "Server",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "enet::@b72fdde267e7ac772003",
+					"jsonFile" : "target-enet-Debug-854f47ad14a96666d0bc.json",
+					"name" : "enet",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "sandbox::@831724bc5758d2c13e8c",
+					"jsonFile" : "target-sandbox-Debug-79fa4a324e1db3707236.json",
+					"name" : "sandbox",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "sandbox_json::@831724bc5758d2c13e8c",
+					"jsonFile" : "target-sandbox_json-Debug-79cffa6055a64142ae20.json",
+					"name" : "sandbox_json",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "sandbox_rtti::@831724bc5758d2c13e8c",
+					"jsonFile" : "target-sandbox_rtti-Debug-b79af8ba35220581e879.json",
+					"name" : "sandbox_rtti",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "sandbox_vs::@831724bc5758d2c13e8c",
+					"jsonFile" : "target-sandbox_vs-Debug-00c2aa129120b22ad4f2.json",
+					"name" : "sandbox_vs",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "sandbox_vs_dll::@3821a0c1228a842d1195",
+					"jsonFile" : "target-sandbox_vs_dll-Debug-109e1cec6426b4671ed7.json",
+					"name" : "sandbox_vs_dll",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "serialize_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-serialize_test-Debug-afe75e85189f5e76ada6.json",
+					"name" : "serialize_test",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "F:/C/serialize-test/cmake-build-debug",
+		"source" : "F:/C/serialize-test"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
