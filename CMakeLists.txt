@@ -30,6 +30,7 @@ set(CEREAL_INCLUDE_DIR ${cereal_SOURCE_DIR}/include)
 add_executable(${PROJECT_NAME}
         client.cpp
         headers/player.h
+        headers/net_common.h
 )
 target_include_directories(${PROJECT_NAME} PRIVATE ${ENET_INCLUDE_DIR} ${CEREAL_INCLUDE_DIR})
 target_link_libraries(${PROJECT_NAME} enet cereal)
@@ -37,6 +38,7 @@ target_link_libraries(${PROJECT_NAME} enet cereal)
 add_executable(Server
         server.cpp
         headers/player.h
+        headers/net_common.h
 )
 target_include_directories(Server PRIVATE ${ENET_INCLUDE_DIR} ${CEREAL_INCLUDE_DIR})
 target_link_libraries(Server enet cereal)

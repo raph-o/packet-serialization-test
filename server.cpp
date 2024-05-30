@@ -8,6 +8,7 @@
 
 #include <enet/enet.h>
 
+#include "headers/net_common.h"
 #include "headers/player.h"
 
 std::atomic<bool> quit(false);
@@ -25,13 +26,14 @@ void listenForExit()
     }
 }
 
-void sendPacketToAllPeers(const ENetHost* host)
+void sendPacketToAllPeers(const ENetHost* host, PacketType type)
 {
     for (int i = 0; i < host->peerCount; i++)
     {
         ENetPeer* peer = &host->peers[i];
         if (peer->state == ENET_PEER_STATE_DISCONNECTED) continue;
         std::ostringstream os;
+        os.write(reinterpret_cast<char*>(&type), sizeof(PacketType));
         {
             cereal::PortableBinaryOutputArchive oarchive(os);
             Player player("Player " + std::to_string(i), i + 1, i + 2);
@@ -64,7 +66,7 @@ int main()
             {
             case ENET_EVENT_TYPE_CONNECT:
                 std::cout << "A new client connected" << std::endl;
-                sendPacketToAllPeers(server);
+                sendPacketToAllPeers(server, FIRST_CONNECTION);
                 break;
             case ENET_EVENT_TYPE_DISCONNECT:
                 std::cout << "A client disconnected" << std::endl;

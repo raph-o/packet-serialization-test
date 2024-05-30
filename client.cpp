@@ -8,6 +8,7 @@
 
 #include <enet/enet.h>
 
+#include "headers/net_common.h"
 #include "headers/player.h"
 
 int main()
@@ -28,15 +29,26 @@ int main()
         std::cout << "Connection to server succeded" << std::endl;
     } else enet_peer_reset(peer);
 
+    PacketType type = UNKNOWN;
     Player player;
     if (enet_host_service(client, &event, 5000) > 0 && event.type == ENET_EVENT_TYPE_RECEIVE)
     {
+        memcpy(&type, event.packet->data, sizeof(PacketType));
+        switch (type)
         {
-            std::string data(reinterpret_cast<char*>(event.packet->data), event.packet->dataLength);
-            std::istringstream is(data);
-            cereal::PortableBinaryInputArchive iarchive(is);
-            iarchive(player);
+        case FIRST_CONNECTION:
+            {
+                std::string data(reinterpret_cast<char*>(event.packet->data) + sizeof(PacketType), event.packet->dataLength);
+                std::istringstream is(data);
+                cereal::PortableBinaryInputArchive iarchive(is);
+                iarchive(player);
+            }
+            break;
+        default:
+            break;
         }
+
+        enet_packet_destroy(event.packet);
     }
 
     std::cout << player.name << ", " << player.x << ", " << player.y << std::endl;
